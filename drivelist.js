@@ -14,7 +14,7 @@ const bufferToString = (bytes) =>
 var result = bufferToString(execSync('wmic logicaldisk get caption,freespace'));
 result = result.substring(result.indexOf("\n") + 1);
 var drives = result.split(/\r\r\n/);
-var enableDrives = new Array(2);
+var enableDrives = new Array();
 drives.forEach(function(drive)
 {
     var info = drive.split(":       ");
